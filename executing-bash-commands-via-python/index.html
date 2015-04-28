@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Executing bash commands via python / Tevin's Views</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="shortcut icon" href="../theme/favicon.ico" />
+        <link rel="apple-touch-icon" href="../theme/apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../theme/apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../theme/apple-touch-icon-iphone4.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../theme/apple-touch-icon-ipad3.png" />
+
+        <link rel="stylesheet" href="../theme/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../theme/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../theme/css/colorbox.css">
+
+        <link rel="stylesheet" href="../theme/css/main.css">
+
+        <script src="../theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="span9">
+                    <div class="row">
+                        <div class="span2"> <!-- logo -->
+                            <div id="logo">
+                                <a href="..">
+                                    <img alt="Tevin's Views" src="../" />
+                                </a>
+                            </div> <!-- logo -->
+                        </div> <!-- logo span -->
+
+                        <div class="span7"> <!-- header -->
+                            <!--[if lt IE 9]>
+                                <p class="chromeframe alert alert-warning">You are using an <strong>outdated</strong> browser, and this site might not look best in it. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+                            <![endif]-->
+                            <header id="site-header">
+                                <div id="site-header-content">
+                                    <h1>
+                                        <a href="..">Tevin's Views</a>
+                                        <small>
+                                            <span class="divider">/</span> 
+                                        </small>
+                                    </h1>
+                                    <p>
+                                        
+                                    </p>
+                                </div>
+                            </header>
+                        </div> <!-- header span -->
+                    </div> <!-- header row -->
+
+                    <div class="row"> <!-- content -->
+                        <div class="content">
+<div class="article-page">
+    <div class="span7 offset2">
+        <header class="article">
+            <h2><a href="../executing-bash-commands-via-python/" rel="bookmark">Executing bash commands via python</a></h2>
+            <time datetime="2014-09-04T10:00:00+05:30">
+                Sep 04, 2014
+            </time>
+        </header>
+    </div>
+
+    <div class="span2">
+    <div class="article-meta article-meta-border">
+        <dl class="dl-horizontal">
+            <dt><i class="icon-file"></i></dt>
+            <dd>
+                <a href="../category/programming.html">
+                    Programming
+                </a>
+            </dd>
+
+            <dt><i class="icon-tags"></i></dt>
+            <dd>
+                    <a href="../tag/programming.html">Programming</a>
+<span class="separator">/</span>                    <a href="../tag/python.html">Python</a>
+<span class="separator">/</span>                    <a href="../tag/linux.html">Linux</a>
+<span class="separator">/</span>                    <a href="../tag/bash.html">bash</a>
+            </dd>
+        </dl>
+
+        <b class="border-notch notch"></b>
+        <b class="notch"></b>
+    </div>
+    </div>
+
+    <div class="span7">
+        <section>
+            <article class="entry">
+    <p>In python, executing bash commands can be done using <a href="https://docs.python.org/2/library/subprocess.html">subprocess </a> module. It’s pretty easy to use and it’s a powerful module. For simple commands,  we can use <a href="https://docs.python.org/2/library/subprocess.html#subprocess.call">subprocess.call</a></p>
+<p>Usage:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s">&quot;command1&quot;</span><span class="p">)</span>
+
+<span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s">&quot;command1&quot;</span><span class="p">,</span> <span class="s">&quot;arg1&quot;</span><span class="p">,</span> <span class="s">&quot;arg2&quot;</span><span class="p">])</span>
+</pre></div>
+
+
+<p>Eg:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s">&quot;ls&quot;</span><span class="p">,</span> <span class="s">&quot;-l&quot;</span><span class="p">])</span>
+<span class="n">total</span> <span class="mi">4</span>
+
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">tevin</span> <span class="n">tevin</span> <span class="mi">15</span> <span class="n">Sep</span> <span class="mi">3</span> <span class="mi">15</span><span class="p">:</span><span class="mi">29</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+
+
+<p>You can also use <a href="https://docs.python.org/2/library/subprocess.html#subprocess.check_call">subprocess.check_call</a>  and <a href="https://docs.python.org/2/library/subprocess.html#subprocess.check_output()">subprocess.check_output</a></p>
+<p><strong>Popen:</strong></p>
+<p>For more flexibility, you can use <a href="https://docs.python.org/2/library/subprocess.html#popen-constructor">Popen</a> . Using this you can store the output of command as well as any error occurred during command execution.</p>
+<p>Eg:</p>
+<div class="highlight"><pre>process = subprocess.Popen([&quot;ls&quot;, &quot;-l&quot;])
+(output, err) = process.communicate()
+</pre></div>
+
+
+<p><a href="https://docs.python.org/2/library/subprocess.html#subprocess.Popen.communicate">communicate</a>  method interacts with process and waits for the process to complete. It returns a tuple consisting of stdout and stderr.</p>
+<p><strong>Executing commands in background:</strong></p>
+<p>subprocess.Popen() only runs a process in the background if nothing in the python script depends on the output of the command being run. For example, the following code won’t be executed in background.</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s">&quot;ls&quot;</span><span class="p">,</span> <span class="s">&quot;-l&quot;</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Thinking about what is subprocess.PIPE?</p>
+<p>subprocess.PIPE: Special value that can be used as the stdin, stdout or stderr argument to Popen and indicates that a pipe to the standard stream should be opened.</p>
+<p><strong>Changing directory(cd command):</strong></p>
+<p>You might be thinking that why ‘cd’? Why it can’t be executed using subprocess?</p>
+<p>If you use subprocess.call(“cd ..”), it will throw an error ‘No such file or directory’. It is because cd is a shell internal. So you can only call it as</p>
+<div class="highlight"><pre>subprocess.call(&#39;cd ..&#39;, shell=True)
+</pre></div>
+
+
+<p>But it is pointless to do so.  As no process can change another process’s working directory (again, at least on a UNIX-like OS, but as well on Windows), this call will have the subshell change its dir and exit immediately. Don’t worry you can change directory using os.chdir(path).</p>
+
+            </article>
+        </section>
+    </div> <!-- span -->
+</div>                        </div>
+                    </div> <!-- content row -->
+
+                    <div class="row"> <!-- footer -->
+                        <div class="span7 offset2">
+                            <footer id="site-footer">
+                                <p>
+                                    <a href="" target="_blank">
+                                        
+                                    </a> Tevin Joseph K O /
+                                    <a href="../">Archives</a>
+                                </p>
+                                <p>
+                                    Powered by
+                                    <a href="https://github.com/getpelican/pelican" target="_blank">
+                                        Pelican
+                                    </a>
+                                    /
+                                    Source code on
+                                    <a href="http://github.com/siovene/iovene.com" target="blank">
+                                        GitHub
+                                    </a>
+                                    /
+                                    Theme <code>Lannisport</code>, also on
+                                    <a href="http://github.com/siovene/lannisport" target="_blank">
+                                        GitHub
+                                    </a>
+                                </p>
+                            </footer>
+                        </div> <!-- footer span -->
+                    </div> <!-- footer row -->
+                </div> <!-- header+content+footer span -->
+
+                <div class="span3">
+                    <aside class="affix">
+                        <div id="sidebar">
+                            <div id="social-icons">
+                                    <span class="social-icon">
+                                        <a href="https://github.com/naparuba/shinken" target="_blank" title="GitHub">
+                                            <i class="icon-github-alt"></i>
+                                        </a>
+                                    </span>
+                                    <span class="social-icon">
+                                        <a href="https://twitter.com/shinken_monitor" target="_blank" title="Twitter">
+                                            <i class="icon-twitter"></i>
+                                        </a>
+                                    </span>
+                            </div>
+
+                            <div id="navigation">
+<nav>
+	<h2>Pages</h2>
+	<ul>
+		<li>
+			<ul>
+				<li>
+					<a href="..">Blog</a>
+				</li>
+
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+<nav>
+	<h2>Categories</h2>
+	<ul>
+		<li>
+			<ul>
+					<li>
+						<a href="../category/cricket.html">Cricket</a>
+					</li>
+					<li>
+						<a href="../category/general.html">General</a>
+					</li>
+					<li>
+						<a href="../category/javascript.html">Javascript</a>
+					</li>
+					<li>
+						<a href="../category/programming.html">Programming</a>
+					</li>
+			</ul>
+		</li>
+	</ul>
+</nav>                            </div>
+                        </div> <!-- sidebar -->
+
+                        <p id="back-to-top">
+                            <a href="#">
+                                <i class="icon-double-angle-up"></i> Back to top
+                            </a>
+                        </p>
+
+                    </aside>
+                </div> <!-- logo+navigation span -->
+            </div> <!-- row -->
+
+        </div> <!-- /container -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../theme/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+        <script>$('body').popover || document.write('<script src="../theme/js/vendor/bootstrap.min.js"><\/script>')</script>
+
+        <script src="../theme/js/jquery.captions.js"></script>
+        <script src="../theme/js/vendor/jquery.colorbox-min.js"></script>
+
+        <script src="../theme/js/main.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-57981880-1'],['_trackPageview'],['_trackPageLoadTime'],['_gat._anonymizeIp']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
