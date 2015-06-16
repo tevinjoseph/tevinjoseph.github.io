@@ -1,0 +1,52 @@
+#left, #right {width: 226px;}
+#left {float: left;}
+#right {float: right;}
+
+#top { margin-bottom : 15px; }
+
+#body_wrapper {width: 960px; margin: 0px auto;  }
+#footer_wrapper { padding : 1px; }
+
+#site_heading, #site_subheading { }
+
+/* two column */
+.two #main {width: 471px; float: left; border-right : 1px solid #bbb; }
+.two #right {width: 472px; border-left: 1px solid #bbb; position : relative; margin-left: -1px;}
+
+/* two column left */
+.two_left #main {width: 709px; float: left;  border-right : 1px solid #bbb;  }
+.two_left #right { border-left: 1px solid #bbb; position : relative; margin-left: -1px; width : 234px;  }
+
+/* two column right */
+.two_right #main {width: 709px; float: right; border-left : 1px solid #bbb; position: relative; margin-left: -1px; }
+.two_right #left { border-right: 1px solid #bbb; width : 234px; }
+
+/* three column */
+.three #main {width: 490px; float: left; border-right : 1px solid #bbb; border-left : 1px solid #bbb; margin-left: -1px;}
+.three #left {border-right: 1px solid #bbb; }
+.three #right { border-left: 1px solid #bbb; position : relative; margin-left: -1px;  }
+
+
+/* three column right */
+.three_right #right {float: left; border-right : 1px solid #bbb; border-left: 1px solid #bbb; margin-left: -1px;}
+.three_right #main {width: 490px; float: right; border-left : 1px solid #bbb; position : relative; margin-left : -1px; }
+.three_right #left { border-right : 1px solid #bbb; position : relative; }
+
+/* three column left */
+.three_left #main {width: 490px; float: left;  border-right : 1px solid #bbb; }
+.three_left #left { border-left : 1px solid #bbb; border-right : 1px solid #bbb; position : relative; margin-left: -1px; }
+.three_left #right { border-left : 1px solid #bbb; position : relative; margin-left : -1px; }
+
+/* three column splash */
+.splash #left, .splash #right, .splash #main {width: 314px; border-right : 1px solid #bbb; }
+.splash #right { border-right : 0; border-left: 1px solid #bbb; position : relative; margin-left : -1px; width: 314px; }
+.splash #main { position : relative; margin-left : -1px; border-left: 1px solid #bbb; }
+.splash #main {float: left;}
+
+
+.splash #top .component { border-bottom : 1px solid #bbb; margin : 0px 15px; padding : 0; padding-bottom : 15px; }
+
+#top, #content_wrapper, #footer_wrapper, #middle_wrapper {clear: both; zoom: 1; overflow: hidden;}
+
+#copyright {padding: 0 10px; text-align: center;}
+#powered_by { text-align: center; margin-bottom : 15px; }

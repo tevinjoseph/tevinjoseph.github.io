@@ -1,0 +1,71 @@
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Droid+Sans|Cabin);
+
+body {font: normal 15px Cabin,Arial,Verdana,sans-serif; color: #444; margin : 0; padding : 0; background: #ccc url('../images/grey.png') top left repeat; }
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Cabin';color: #444;}
+
+.component h2,.component h3 { margin: 15px 0 10px 0; }
+
+.component h2 {font-size: 22px;  }
+.component h3 {font-size: 22px; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: #444;text-decoration: none;}
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {color: #444;}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {color: #444;}
+
+a, a:visited {color: #0883c0;}
+a:hover {color: #0a94d9;}
+
+
+
+#body_wrapper {margin: 20px auto;  background: #fff;}
+
+#body_wrapper { 
+-webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.55);
+-moz-box-shadow:    0px 1px 15px rgba(0, 0, 0, 0.55);
+box-shadow:         0px 1px 15px rgba(0, 0, 0, 0.55);
+}
+
+#wrapper { background: #f3f3f3 url('../images/white-paper.jpg') top left repeat;}
+
+
+#header_text { padding: 30px 30px 10px 30px; background: #666 url('../images/bg.jpg') top left repeat; }
+#header_photo {text-align: center; }
+#content_wrapper { margin-top : 0px; padding: 15px 8px}
+#footer_wrapper { background: #eee url('../images/darkergrey.png') top left repeat; border-top: 1px solid #ccc;}
+#header_text h1#site_heading a {font: normal 76px/76px 'Fredericka the Great';color: #fff;}
+#header_text h2#site_subheading {font: normal 18px/60px 'Cabin';color: #fff;}
+
+#navwrapper {background: #222 url('../images/blackbar.jpg') top left repeat; border-bottom: 1px solid #222;
+-webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.75);
+-moz-box-shadow:    0px 1px 10px rgba(0, 0, 0, 0.75);
+box-shadow:         0px 1px 10px rgba(0, 0, 0, 0.75);}
+#primary_navigation { width: 960px; margin:0 auto; }
+#primary_navigation ul {  text-align: center; }
+
+#primary_navigation ul li { margin-right : 5px; margin-top: 3px; margin-bottom: 3px;}
+#primary_navigation ul li a { font: normal 15px/42px 'Droid Sans';  text-decoration: none; color: #eee; padding: 9px 14px; }
+#primary_navigation ul li a:hover, #primary_navigation ul li a:active {background-color : #333; color:#fff;}
+#primary_navigation ul li.active a {background: #676767; color:#fff; border-radius: 3px;  }
+
+.metadata {font-size: 11px; color: #999;  }
+
+
+
+.navigation_component ul {list-style-type: none; font-size: 15px; padding: 0; margin: 0;}
+.navigation_component ul a {text-decoration: none; }
+.navigation_component ul li {padding: 5px 0; margin: 0;}
+.navigation_component ul ul {padding-left: 35px; list-style-type: circle;}
+
+
+.component input {min-height: 20px; margin-top:3px;}
+.component input, .component textarea, .component select { border: 1px solid #ccc; background-color: #fff; font: normal 14px Arial,Verdana,sans-serif; color: #333;}
+input.form_field_submit_button, .submit_wrapper input {background: #212528; color: #fff; padding: 5px 10px;}
+input.form_field_submit_button:hover, .submit_wrapper input:hover { background: #666;}
+.radio_option input, .form_field_check input {min-height: auto;}
+
+
+.comment.owner {border: 1px solid #ccc;}
+.comment {border-bottom: 1px solid #ccc;}
+
+#powered_by a, #powered_by a:visited {  }
